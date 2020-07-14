@@ -1,4 +1,9 @@
 1.关联git
+git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）
+
+git commit  -m  ”提交信息”  （注：“提交信息”里面换成你需要，如“first commit”）
+
+git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
 
 2.划分目录
 
@@ -22,3 +27,30 @@
 4.制作主页轮播图
 在network添加request =请求数据的axios
 在network添加home => 单独为主页请求数据的模块
+
+5.制作主页推荐
+新建RecommendView接受父组件数据
+
+6.制作NavBar吸顶效果
+
+7.制作主页的tabControl表情
+  为选中效果所以在遍历时也要遍历下标
+
+8.请求主页商品数据
+上拉刷新的数据模型：
+goods:{
+  'pop':{page:,list[]},
+   'news':{page:,list[]},
+    'sell':{page:,list[]}
+}
+由于有三类不同的数据【流行】【新款】【精选】
+每种类型的数据还要对应不同的页码
+所以在请求数据的时候需要得到数据的同时还要更改页码
+
+this.goods[type].list.push(...res.data.list)
+this.goods[type].page+=1
+
+9.首页商品的展示
+  组件的封装 ：
+  goodsList
+  GoddsListItem
