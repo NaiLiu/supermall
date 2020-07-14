@@ -54,3 +54,7 @@ this.goods[type].page+=1
   组件的封装 ：
   goodsList
   GoddsListItem
+
+10.更好的滚动
+better-scroll
+mounted要写在mounted里

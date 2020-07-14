@@ -33,7 +33,9 @@ export default {
   methods: {
     itemClick(index)
     {
-      this.currentIndex=index
+      this.currentIndex=index;
+      // 向外发送数据
+      this.$emit("tabClick",index)
     }
   }
 }

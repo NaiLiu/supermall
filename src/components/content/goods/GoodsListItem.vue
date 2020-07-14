@@ -3,9 +3,8 @@
     <img :src="goodsItem.show.img" alt="">
     <div class="goodsInfo">
       <p>{{goodsItem.title}}</p>
-      <span class="price">{{goodsItem.price}}</span>
-      <span class="collect">{{goodsItem.cfav}}
-      <img src="~assets/img/common/collect.svg">
+      <span class="price">{{goodsItem.price}}元</span>
+      <span class="collect">{{goodsItem.cfav}}收藏
       </span>
       
      
@@ -67,24 +66,10 @@ export default {
   position: relative;
 }
 
-.price::before{
-  content: '';
-  position:absolute;
-  left: -22px;
-  top: -2px;
-  width: 17px;
-  height: 15px;
-  background:url('~assets/img/home/Price_bg.svg') 0 0/25px 16px no-repeat;
-}
+
 
 .collect{
     position: relative;
   }
-.collect img{
-  position:absolute;
-  width: 15px;
-  height: 15px;
-  top: -1px;
-  left: 22px;
-  }
+
 </style>
