@@ -1,0 +1,24 @@
+1.关联git
+
+2.划分目录
+
+3.引入css文件
+引入normalize.css
+创建base.css
+
+5.设置别名和editorconfig
+除了network和router都设置别名
+-------->初始化工作完成
+
+1.修改title图标
+"<%= BASE_URL %>favicon.ico"
+2.完成Tabbar
+
+3.完成NavBar组件
+在主页进行使用
+ line-height如果标签内没有内容会不显示高度
+主页NavBar的css在home里单独设置
+
+4.制作主页轮播图
+在network添加request =请求数据的axios
+在network添加home => 单独为主页请求数据的模块
