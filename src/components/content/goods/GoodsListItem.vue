@@ -1,6 +1,6 @@
 <template>
   <div class="goodsItem">
-    <img :src="goodsItem.show.img" alt="">
+    <img :src="goodsItem.show.img" alt="" @load="imageLoad">
     <div class="goodsInfo">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}元</span>
@@ -27,6 +27,12 @@ export default {
       default(){
         return {}
       }
+    }
+  },
+  methods: {
+    imageLoad(){
+      // 使用总线让home监听
+      this.$bus.$emit('itemImageLoad')
     }
   }
 }

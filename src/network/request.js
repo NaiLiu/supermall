@@ -61,6 +61,7 @@ export function request(config){
       // 1. 创建axios实例
       const instance=axios.create({
         // baseURL:'http://123.207.32.32:8000',
+
         timeout:5000
       })
 
@@ -76,10 +77,11 @@ export function request(config){
         // });
         //响应拦截
          instance.interceptors.response.use(res=>{
-          console.log(res)
+          // console.log(res)
           return res.data  //不返回的话main会获取不到数据
          },err=>{
-           console.log(err)
+          //  console.log(err)
+          return err
          })
 
       return instance(config)
