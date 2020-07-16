@@ -84,3 +84,7 @@ Vue使用@load
 监听HomeSwiper的img加载完成
 加载完成后，发出世界，在Home中获取正确的值
 
+15.让home记录离开时的状态和位置
+keep-alive
+离开时，保存一个位置信息saveY
+回来时，将位置设置为saveY原来保存的位置信息即可

@@ -66,7 +66,8 @@ export default {
       currentType:'pop',
       isShowBackTop:'false',
       tabOffsetTop:0,
-      isTabFixed:false
+      isTabFixed:false,
+      saveY:0
     }
   },
   created () {
@@ -101,6 +102,17 @@ export default {
       return this.goods[this.currentType].list
     }
   },
+destroyed () {
+      
+    },
+    activated () {
+      console.log('活跃')
+      this.$refs.scroll.scrollTo(0,this.saveY,0)
+    },
+    deactivated () {
+      this.saveY=this.$refs.scroll.scroll.y
+    },
+
   methods: {
     // -------事件监听
     tabClick(index){
